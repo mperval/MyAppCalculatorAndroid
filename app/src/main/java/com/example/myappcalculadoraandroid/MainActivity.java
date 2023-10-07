@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
                     intentViewIntent.putExtra("numero1", numero1);
                     intentViewIntent.putExtra("numero2", numero2);
 
+                    // Indicar que la operación es una suma.
+                    intentViewIntent.putExtra("esSuma", true);
+
                     //activar segunda actividad.
                     startActivity(intentViewIntent);
 
@@ -68,6 +71,130 @@ public class MainActivity extends AppCompatActivity {
                     number1.setText("");
                     number2.setText("");
                 }
+            }
+        });
+        btnResta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Obtener los números de los EditText
+                String num1String = number1.getText().toString();
+                String num2String = number2.getText().toString();
+
+                // Verificar si ambos valores son números double válidos y no están vacíos
+                if (!num1String.isEmpty() && !num2String.isEmpty() && isValidDouble(num1String) && isValidDouble(num2String)) {
+                    // Parsear los números
+                    double numero1 = Double.parseDouble(num1String);
+                    double numero2 = Double.parseDouble(num2String);
+
+                    // Realizar la resta
+                    double resultado = numero1 - numero2;
+
+                    // Crear un Intent para abrir MainActivity2 y pasar los datos
+                    Intent intentViewIntent = new Intent(MainActivity.this, MainActivity2.class);
+
+                    // Enviar resultado
+                    intentViewIntent.putExtra("resultado", resultado);
+                    // Enviar números introducidos por el usuario
+                    intentViewIntent.putExtra("numero1", numero1);
+                    intentViewIntent.putExtra("numero2", numero2);
+
+                    // Indicar que la operación es una resta
+                    intentViewIntent.putExtra("esResta", true);
+
+                    // Activar segunda actividad
+                    startActivity(intentViewIntent);
+                } else {
+                    Toast.makeText(MainActivity.this, "Ingresa dos números válidos.", Toast.LENGTH_SHORT).show();
+                    // Borrar los datos incorrectos
+                    number1.setText("");
+                    number2.setText("");
+                }
+            }
+        });
+        btnMultiplicar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Obtener los números de los EditText
+                String num1String = number1.getText().toString();
+                String num2String = number2.getText().toString();
+
+                // Verificar si ambos valores son números double válidos y no están vacíos
+                if (!num1String.isEmpty() && !num2String.isEmpty() && isValidDouble(num1String) && isValidDouble(num2String)) {
+                    // Parsear los números
+                    double numero1 = Double.parseDouble(num1String);
+                    double numero2 = Double.parseDouble(num2String);
+
+                    // Realizar la resta
+                    double resultado = numero1 * numero2;
+
+                    // Crear un Intent para abrir MainActivity2 y pasar los datos
+                    Intent intentViewIntent = new Intent(MainActivity.this, MainActivity2.class);
+
+                    // Enviar resultado
+                    intentViewIntent.putExtra("resultado", resultado);
+                    // Enviar números introducidos por el usuario
+                    intentViewIntent.putExtra("numero1", numero1);
+                    intentViewIntent.putExtra("numero2", numero2);
+
+                    // Indicar que la operación es una Multiplicacion.
+                    intentViewIntent.putExtra("esMultiplicar", true);
+
+                    // Activar segunda actividad
+                    startActivity(intentViewIntent);
+                } else {
+                    Toast.makeText(MainActivity.this, "Ingresa dos números válidos.", Toast.LENGTH_SHORT).show();
+                    // Borrar los datos incorrectos
+                    number1.setText("");
+                    number2.setText("");
+                }
+            }
+        });
+        btnDividir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Obtener los números de los EditText
+                String num1String = number1.getText().toString();
+                String num2String = number2.getText().toString();
+
+                // Verificar si ambos valores son números double válidos y no están vacíos
+                if (!num1String.isEmpty() && !num2String.isEmpty() && isValidDouble(num1String) && isValidDouble(num2String) && !num1String.equals("0") && !num2String.equals("0")) {
+                    // Parsear los números
+                    double numero1 = Double.parseDouble(num1String);
+                    double numero2 = Double.parseDouble(num2String);
+
+                    // Realizar la resta
+                    double resultado = numero1 / numero2;
+
+                    // Crear un Intent para abrir MainActivity2 y pasar los datos
+                    Intent intentViewIntent = new Intent(MainActivity.this, MainActivity2.class);
+
+                    // Enviar resultado
+                    intentViewIntent.putExtra("resultado", resultado);
+                    // Enviar números introducidos por el usuario
+                    intentViewIntent.putExtra("numero1", numero1);
+                    intentViewIntent.putExtra("numero2", numero2);
+
+                    // Indicar que la operación es una division
+                    intentViewIntent.putExtra("esDividir", true);
+
+                    // Activar segunda actividad
+                    startActivity(intentViewIntent);
+                } else {
+                    Toast.makeText(MainActivity.this, "Ingresa dos números válidos o mayor que 0.", Toast.LENGTH_SHORT).show();
+                    // Borrar los datos incorrectos
+                    number1.setText("");
+                    number2.setText("");
+                }
+            }
+        });
+        /**
+         * accion de boton clean que pone vacio los textView en blancos.
+         */
+        btnClean.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                number1.setText("");
+                number2.setText("");
             }
         });
     }

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/fondo">
 
     <LinearLayout
         android:id="@+id/linearLayoutPrincipal"
@@ -38,6 +39,7 @@
             android:text="CalculatorAPP"
             android:gravity="center"
             android:textSize="45sp"
+            android:textColor="@color/letras"
             android:textStyle="bold" />
 
         <EditText
@@ -46,6 +48,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
+            android:textColor="@color/letras"
             android:hint="0" />
 
         <EditText
@@ -54,6 +57,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
+            android:textColor="@color/letras"
             android:hint="0" />
 
         <Space
@@ -72,6 +76,8 @@
                 android:layout_margin="5dp"
                 android:text="+"
                 android:textSize="30sp"
+                android:textColor="@color/letras"
+                android:background="@color/black"
                 android:layout_gravity="center" />
 
             <Button
@@ -81,6 +87,8 @@
                 android:layout_margin="5dp"
                 android:text="-"
                 android:textSize="30sp"
+                android:textColor="@color/letras"
+                android:background="@color/black"
                 android:layout_gravity="center" />
 
             <Button
@@ -90,6 +98,8 @@
                 android:layout_margin="5dp"
                 android:text="*"
                 android:textSize="30sp"
+                android:textColor="@color/letras"
+                android:background="@color/black"
                 android:layout_gravity="center" />
 
             <Button
@@ -99,6 +109,8 @@
                 android:layout_margin="5dp"
                 android:text="/"
                 android:textSize="30sp"
+                android:textColor="@color/letras"
+                android:background="@color/black"
                 android:layout_gravity="center" />
 
         </TableRow>
@@ -113,6 +125,8 @@
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:textSize="30sp"
+            android:textColor="@color/letras"
+            android:background="@color/black"
             android:text="Clean" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
