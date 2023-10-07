@@ -7,9 +7,9 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/linearLayoutPrincipal"
+        android:layout_width="368dp"
+        android:layout_height="659dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
@@ -21,77 +21,98 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="match_parent"
-            android:layout_height="331dp"
+            android:id="@+id/imgCalculator"
+            android:layout_width="217dp"
+            android:layout_height="223dp"
+            android:layout_gravity="center"
             app:srcCompat="@drawable/calculator" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="19dp" />
+            android:layout_height="21dp" />
+
+        <TextView
+            android:id="@+id/Titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CalculatorAPP"
+            android:gravity="center"
+            android:textSize="45sp"
+            android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/number1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            android:text="Name" />
+            android:hint="0" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/number2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            android:text="Name" />
+            android:hint="0" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="48dp" />
+            android:layout_height="44dp" />
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="124dp">
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
             <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="104dp"
+                android:id="@+id/btnSuma"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_margin="5dp"
-                android:text="Button" />
+                android:text="+"
+                android:textSize="30sp"
+                android:layout_gravity="center" />
 
             <Button
-                android:id="@+id/button18"
-                android:layout_width="wrap_content"
-                android:layout_height="104dp"
+                android:id="@+id/btnResta"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_margin="5dp"
-                android:text="Button" />
+                android:text="-"
+                android:textSize="30sp"
+                android:layout_gravity="center" />
 
             <Button
-                android:id="@+id/button19"
-                android:layout_width="wrap_content"
-                android:layout_height="104dp"
+                android:id="@+id/btnMultiplicar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_margin="5dp"
-                android:text="Button" />
+                android:text="*"
+                android:textSize="30sp"
+                android:layout_gravity="center" />
 
             <Button
-                android:id="@+id/button20"
-                android:layout_width="wrap_content"
-                android:layout_height="104dp"
+                android:id="@+id/btnDividir"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_margin="5dp"
-                android:text="Button" />
+                android:text="/"
+                android:textSize="30sp"
+                android:layout_gravity="center" />
 
         </TableRow>
 
+
         <Space
             android:layout_width="match_parent"
-            android:layout_height="48dp" />
+            android:layout_height="36dp" />
 
         <Button
-            android:id="@+id/button21"
+            android:id="@+id/btnClean"
             android:layout_width="match_parent"
-            android:layout_height="69dp"
-            android:text="Button" />
+            android:layout_height="58dp"
+            android:textSize="30sp"
+            android:text="Clean" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
